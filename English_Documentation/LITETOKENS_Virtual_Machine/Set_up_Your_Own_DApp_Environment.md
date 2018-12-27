@@ -4,7 +4,7 @@ Version 0.1
 
 ## Introduction
 
-Currently, we can reduce the cost of development by setting up a smart contract environment on LITETOKENS's private chain, which does not consume the resource of public chains. LITETOKENS's virtual machine is highly compatible with that of Ethereum, and most smart contracts written in Solidity can also run on LITETOKENS network. LITETOKENS-based smart contracts provide high TPS and free access to most scenarios for its users- this is undoubtedly a significant step for the entire smart contract community. Up to this point, we've completed the underlying part of LITETOKENS virtual machine (TVM), and an ecosystem centered around TVM including various development tools is also underway. This article intends to introduce a basic method to deploy smart contracts and to interact with them.
+Currently, we can reduce the cost of development by setting up a smart contract environment on LITETOKENS's private chain, which does not consume the resource of public chains. LITETOKENS's virtual machine is highly compatible with that of Ethereum, and most smart contracts written in Solidity can also run on LITETOKENS network. LITETOKENS-based smart contracts provide high TPS and free access to most scenarios for its users- this is undoubtedly a significant step for the entire smart contract community. Up to this point, we've completed the underlying part of LITETOKENS virtual machine (LVM), and an ecosystem centered around LVM including various development tools is also underway. This article intends to introduce a basic method to deploy smart contracts and to interact with them.
 
 ## Prerequisites
 

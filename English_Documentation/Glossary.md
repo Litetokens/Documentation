@@ -74,6 +74,6 @@ Transaction refers to the process of token transfer between different accounts.
 Transaction information is verified by nodes and broadcasted in the blockchain network.
 ## LITETOKENS Power	
 LITETOKENS Power (TP) can be obtained from balance freezing. All users in LITETOKENS's network are entitled to vote for Super Representatives they approve of. To vote, TP is needed, the amount of which is determined by the amount of frozen asset. Calculation of TP: 1 frozen XLT equals to 1 TP. When users unfreeze all frozen balance, they also lose their TPs, which invalidates their votes for the current voting round. To prevent invalid votes, users can refreeze balance.
-##TVM（LITETOKENS Virtual Machine）
-LITETOKENS Virtual Machine (TVM), is a lightweight, Turing complete virtual machine developed for Litetokens’s ecosystem, aimed at providing millions of global developers with custom-built blockchain system which is efficient, convenient, stable, secure and scalable.
+##LVM（LITETOKENS Virtual Machine）
+LITETOKENS Virtual Machine (LVM), is a lightweight, Turing complete virtual machine developed for Litetokens’s ecosystem, aimed at providing millions of global developers with custom-built blockchain system which is efficient, convenient, stable, secure and scalable.
 	

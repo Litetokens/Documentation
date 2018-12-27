@@ -10,7 +10,7 @@
 + If you want to know more about LITETOKENS Wallet, please check out [Android Wallet](https://github.com/litetokens/Documentation/blob/master/English_Documentation/Android_Wallet/Guide_to_Android_Wallet.md).
 + If you want to know more about the programming contest, please check out [LITETOKENS programming contest](https://github.com/litetokens/Documentation/tree/master/English_Documentation/LITETOKENS_Programming_Contest).
 + If you want to know more about the XLT migration, please check out [XLT](https://github.com/litetokens/Documentation/tree/master/XLT).
-+ For more information about Virtual Machine, please check out [TVM](https://github.com/litetokens/Documentation/blob/master/English_Documentation/LITETOKENS_Virtual_Machine/Virtual_Machine_Introduction.md).
++ For more information about Virtual Machine, please check out [LVM](https://github.com/litetokens/Documentation/blob/master/English_Documentation/LITETOKENS_Virtual_Machine/Virtual_Machine_Introduction.md).
 + For latest process of LITETOKENS, please follow the [LITETOKENS documentation](https://github.com/litetokens/Documentation/tree/master/English_Documentation).
 
 # Super Representative Guide
@@ -46,7 +46,7 @@ After approval voting, the top 27 Super Representatives by total approval will b
 + 如果你想了解关于波场钱包的相关信息，请查看[Android钱包使用指导](https://github.com/litetokens/Documentation/blob/master/中文文档/Android钱包/Android钱包使用指导.md)。
 + 如果你想了解编程大赛，请查看[波场编程大赛](https://github.com/litetokens/Documentation/tree/master/中文文档/波场编程大赛)。
 + 如果你想了解波场XLT迁移，请查看[XLT](https://github.com/litetokens/Documentation/tree/master/XLT)相关文档。
-+ 对于波场虚拟机的更多信息，请查看[TVM](https://github.com/litetokens/Documentation/blob/master/English_Documentation/LITETOKENS_Virtual_Machine/Virtual_Machine_Introduction.md)相关文档。
++ 对于波场虚拟机的更多信息，请查看[LVM](https://github.com/litetokens/Documentation/blob/master/English_Documentation/LITETOKENS_Virtual_Machine/Virtual_Machine_Introduction.md)相关文档。
 + 对于波场发展的最新进展，请时刻关注[波场文档](https://github.com/litetokens/Documentation/tree/master/中文文档)。
 
 # 超级代表文档指引

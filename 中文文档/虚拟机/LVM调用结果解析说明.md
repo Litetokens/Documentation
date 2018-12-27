@@ -24,7 +24,7 @@ getTransactionById接口用于获取交易上链后的状态。对于智能合�
         contractResult: 
         0000000000000000000000000000000000000000000000000000000000000009
         contractAddress: 
-        TVMCU221WnGfTBcCo7RMQ3X6rf9X1FKTUk
+        LVMCU221WnGfTBcCo7RMQ3X6rf9X1FKTUk
         logList: 
         
         receipt: 
@@ -183,11 +183,11 @@ code: 交易执行是否成功，除标识成功的SUCESS外还有以下几种�
 ```
 REVERT //合约中执行回退操作
 BAD_JUMP_DESTINATION //合约中指令跳转异常
-OUT_OF_MEMORY //合约中使用TVM虚拟机的memory超过3M
+OUT_OF_MEMORY //合约中使用LVM虚拟机的memory超过3M
 STACK_TOO_SMALL //合约中指令STACK存储参数异常
 STACK_TOO_LARGE //合约中指令STACK存储参数异常
 ILLEGAL_OPERATION //合约中执行到非法指令
-STACK_OVERFLOW //合约过程中TVM堆栈使用超过1024
+STACK_OVERFLOW //合约过程中LVM堆栈使用超过1024
 OUT_OF_ENERGY //合约执行过程中fee_limit提供的ENERGY不足
 OUT_OF_TIME //合约执行时间超过50ms
 JVM_STACK_OVER_FLOW //合约过程中发生JVM栈溢出
