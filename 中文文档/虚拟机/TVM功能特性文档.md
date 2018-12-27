@@ -1,6 +1,6 @@
-# Tron virtual machine 功能特性介绍及基于Tron的solidity语言使用文档
+# Litetokens virtual machine 功能特性介绍及基于Litetokens的solidity语言使用文档
 
-Tron virtual machine 基于以太坊 solidity 语言实现，兼容以太坊虚拟机的特性，但基于tron自身属性也有部分的区别。
+Litetokens virtual machine 基于以太坊 solidity 语言实现，兼容以太坊虚拟机的特性，但基于litetokens自身属性也有部分的区别。
 
 ## I 智能合约
 波场虚拟机运行的智能合约兼容以太坊智能合约特性，以protobuf的形式定义合约内容：
@@ -57,7 +57,7 @@ abi:合约所有函数的接口信息
 
 bytecode：合约字节码
 
-call_value：随合约调用传入的trx金额
+call_value：随合约调用传入的xlt金额
 
 consume_user_resource_percent：程序开发人员与调用程序者的资源扣费百分比
 
@@ -78,7 +78,7 @@ Constant function 是指用 view/pure/constant 修饰的函数。会在调用的
 
 2. 消息调用 （message calls）
 
-消息调用可以向其他的合约发起函数调用，也可以向合约的账户或非合约的账户转帐trx。 与普通的波场triggercontract类似， 消息调用也有调用的发起者，接受者，数据，转账金额，扣费，以及返回值等属性。每一个消息调用都可以递归的生成新的消息调用。
+消息调用可以向其他的合约发起函数调用，也可以向合约的账户或非合约的账户转帐xlt。 与普通的波场triggercontract类似， 消息调用也有调用的发起者，接受者，数据，转账金额，扣费，以及返回值等属性。每一个消息调用都可以递归的生成新的消息调用。
 合约可以决定在其内部的消息调用中，对于剩余的 energy ，应发送和保留多少。如果在内部消息调用时发生了OutOfEnergyException
 异常（或其他任何异常）,会返回false，但不会以异常的形式抛出。此时，只有与该内部消息调用一起发送的gas会被消耗掉，如果不表明消息调用所传入的费用call.value(energy)，则会扣掉所有的剩余energy。 
 
@@ -121,7 +121,7 @@ transfer/send/call/callcode/delegatecall函数调用转账
 11）兼容所有以太坊内置函数
 
 >注意：
-波场2）- 10）为波场自己的内置函数 具体中文文档请参看：https://github.com/tronprotocol/Documentation/blob/master/中文文档/虚拟机/虚拟机内置函数.md
+波场2）- 10）为波场自己的内置函数 具体中文文档请参看：https://github.com/litetokens/Documentation/blob/master/中文文档/虚拟机/虚拟机内置函数.md
 
 >以太坊 RIPEMD160 函数不推荐使用，波场返回的是一个自己的基于sha256的hash结果，并不是准确的以太坊RIPEMD160。以后会考虑删除这个函数。
  
@@ -132,27 +132,27 @@ transfer/send/call/callcode/delegatecall函数调用转账
 在solidity中使用的时候需要对波场地址做如下处理 （推荐）：
     
     /**
-     *  @dev    convert uint256 (HexString add 0x at beginning) tron address to solidity address type
-     *  @param  tronAddress uint256 tronAddress, begin with 0x, followed by HexString
+     *  @dev    convert uint256 (HexString add 0x at beginning) litetokens address to solidity address type
+     *  @param  litetokensAddress uint256 litetokensAddress, begin with 0x, followed by HexString
      *  @return Solidity address type
      */
-    function convertFromTronInt(uint256 tronAddress) public view returns(address){
-        return address(tronAddress);
+    function convertFromLitetokensInt(uint256 litetokensAddress) public view returns(address){
+        return address(litetokensAddress);
     }
 这个和在以太坊中其他类型转换成address类型语法相同。
 ### 2. 地址判等
 solidity中有地址常量判断，如果写的是21字节地址编译器会报错，只用写20字节地址即可，如：
 ```
-    function compareAddress(address tronAddress) public view returns (uint256){
-        // if (tronAddress == 0x41ca35b7d915458ef540ade6068dfe2f44e8fa733c) { // compile error
-        if (tronAddress == 0xca35b7d915458ef540ade6068dfe2f44e8fa733c) { // right
+    function compareAddress(address litetokensAddress) public view returns (uint256){
+        // if (litetokensAddress == 0x41ca35b7d915458ef540ade6068dfe2f44e8fa733c) { // compile error
+        if (litetokensAddress == 0xca35b7d915458ef540ade6068dfe2f44e8fa733c) { // right
             return 1;
         } else {
             return 0;
         }
     }
 ```
-tronAddress从wallet-cli传入是0000000000000000000041ca35b7d915458ef540ade6068dfe2f44e8fa733c这个21字节地址，即正常的波场地址时，是会返回1的，判断正确。
+litetokensAddress从wallet-cli传入是0000000000000000000041ca35b7d915458ef540ade6068dfe2f44e8fa733c这个21字节地址，即正常的波场地址时，是会返回1的，判断正确。
 ### 3. 地址赋值
 solidity中有地址常量的赋值，如果写的是21字节地址编译器会报错，只用写20字节地址即可，solidity中后续操作直接利用这个20位地址，波场虚拟机内部做了补位操作。如：
 ```
@@ -168,8 +168,8 @@ solidity中有地址常量的赋值，如果写的是21字节地址编译器会�
 
 1 货币
 
-类似于solidity对ether的支持，波场虚拟机的代码支持的货币单位有trx和sun，其中1trx = 1000000sun，大小写敏感，只支持小写。目前tron-studio支持trx和sun，在remix中，不支持trx和sun，如果使用ether、finney等单位时，注意换算(可能会发生溢出错误)。
-我们推荐使用tron-studio代替remix进行tron智能合约的编写。
+类似于solidity对ether的支持，波场虚拟机的代码支持的货币单位有xlt和sun，其中1xlt = 1000000sun，大小写敏感，只支持小写。目前litetokens-studio支持xlt和sun，在remix中，不支持xlt和sun，如果使用ether、finney等单位时，注意换算(可能会发生溢出错误)。
+我们推荐使用litetokens-studio代替remix进行litetokens智能合约的编写。
 
 2 区块相关
 

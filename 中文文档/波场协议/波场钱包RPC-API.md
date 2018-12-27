@@ -38,7 +38,7 @@
 [33. 分页查询通证列表](#33)\
 [34. 对交易进行签名](#34)\
 [35. 创建地址和秘钥](#35)\
-[36. TRX快捷转账](#36)\
+[36. XLT快捷转账](#36)\
 [37. 生成地址和私钥](#37)\
 [38. 转让波场币2](#38)\
 [39. 更新账户2](#39)\
@@ -64,7 +64,7 @@
      
 ## <h2 id="API的具体定义请参考">API的具体定义请参考</h2> 
 
-https://github.com/tronprotocol/java-tron/blob/develop/src/main/protos/api/api.proto
+https://github.com/litetokens/java-litetokens/blob/develop/src/main/protos/api/api.proto
 
 ## <h2 id="你可能需要经常用到的如下几个API">你可能需要经常用到的如下几个API</h2>
  
@@ -171,12 +171,12 @@ AssetIssueContract：包含发行人地址、通证名称、总发行量、波�
 7.4	返回值  
 Transaction：返回通证发行的交易，钱包签名后再请求广播交易。  
 7.5	功能说明  
-发行通证。所有人都可以发行通证，发行通证会消耗1024个trx。发行通证后，在有效期内任何人都可以参与通证发行，用trx按照比例兑换通证。
+发行通证。所有人都可以发行通证，发行通证会消耗1024个xlt。发行通证后，在有效期内任何人都可以参与通证发行，用xlt按照比例兑换通证。
 + 示例：
 
 `assetissue password abc 1000000 1 1 2018-5-31 2018-6-30 abcdef a.com 1000 1000000 200000 180 300000 365` 
 
-以上命令的发行了名为abc的资产，发行总量为100万，abc与TRX的兑换比例为1:1，发行日期为2018-5-31至2018-6-30，描述为abcdef，网址为a.com，
+以上命令的发行了名为abc的资产，发行总量为100万，abc与XLT的兑换比例为1:1，发行日期为2018-5-31至2018-6-30，描述为abcdef，网址为a.com，
 每个账户每天的token转账最多消耗自己1000 bandwidth points，整个网络每天最多消耗自己1000000 bandwidth points。其中20万锁仓180天，30万锁仓365天。
 
 
@@ -538,7 +538,7 @@ BytesMessage：Passphrase
 35.4 返回值                                                                                  
 BytesMessage：地址
 
-## <h2 id="36">36. TRX快捷转账</h2>
+## <h2 id="36">36. XLT快捷转账</h2>
 36.1 接口说明                                                                                  
 rpc EasyTransfer (EasyTransferMessage) returns (EasyTransferResponse) {};  
 36.2 提供节点                                                                                  
@@ -612,14 +612,14 @@ AssetIssueContract：包含发行人地址、通证名称、总发行量、波�
 41.4	返回值  
 TransactionExtention：返回交易、交易ID、操作结果等。钱包对交易签名后再请求广播交易。 
 41.5	功能说明  
-发行通证。所有人都可以发行通证，发行通证会消耗1024个trx。发行通证后，在有效期内任何人都可以参与通证发行，用trx按照比例兑换通证。
+发行通证。所有人都可以发行通证，发行通证会消耗1024个xlt。发行通证后，在有效期内任何人都可以参与通证发行，用xlt按照比例兑换通证。
 注意，凡带xxx2的接口，与xxx接口功能相同，只是返回值增加更详细的提示。如果result的result值为false，则message为错误提示，transaction和txid字段忽略。constant_result只和职能合约调用有关，其他交易忽略。
 
 + 示例：
 
 `assetissue password abc 1000000 1 1 2018-5-31 2018-6-30 abcdef a.com 1000 1000000 200000 180 300000 365` 
 
-以上命令的发行了名为abc的资产，发行总量为100万，abc与TRX的兑换比例为1:1，发行日期为2018-5-31至2018-6-30，描述为abcdef，网址为a.com，
+以上命令的发行了名为abc的资产，发行总量为100万，abc与XLT的兑换比例为1:1，发行日期为2018-5-31至2018-6-30，描述为abcdef，网址为a.com，
 每个账户每天的token转账最多消耗自己1000 bandwidth points，整个网络每天最多消耗自己1000000 bandwidth points。其中20万锁仓180天，30万锁仓365天。
 
 ## <h2 id="42">42. 更新超级代表候选人信息2</h2>

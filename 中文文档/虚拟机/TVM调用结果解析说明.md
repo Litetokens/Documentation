@@ -1,4 +1,4 @@
-# Tron virtual machine 调用结果说明
+# Litetokens virtual machine 调用结果说明
 
 # 概述
 当调用getTransactionInfoById接口得到contractResult后，需要开发者自行解析结果。
@@ -59,7 +59,7 @@ contractAddress: 调用的合约地址
 
 logList: 如果有事件等打出的log信息
 
-receipt: 包含5个字段，见https://github.com/tronprotocol/Documentation/blob/master/中文文档/虚拟机/Energy消耗机制.md
+receipt: 包含5个字段，见https://github.com/litetokens/Documentation/blob/master/中文文档/虚拟机/Energy消耗机制.md
 
 # contractResult详解
 contractResult字段显示了合约调用的直接返回结果，由HexString的形式展示。以每64个16进制字符（32bytes）为一个字，根据返回值类型分别显示。
@@ -96,7 +96,7 @@ B. 不定长变量
         function bar() public returns(bytes8,uint256[],string){
                 uint256[] memory a= new uint256[](10);
                 a[0]=1;
-                string memory s ="tron";
+                string memory s ="litetokens";
                 return (11,a,s);
          }
     
@@ -118,7 +118,7 @@ B. 不定长变量
     0000000000000000000000000000000000000000000000000000000000000000     ...
     0000000000000000000000000000000000000000000000000000000000000000     第二个变量的第9位的值 （0）
     0000000000000000000000000000000000000000000000000000000000000004     第三个非定长变量的长度（4）
-    74726f6e00000000000000000000000000000000000000000000000000000000     16进制的ascii码，对应"tron"
+    74726f6e00000000000000000000000000000000000000000000000000000000     16进制的ascii码，对应"litetokens"
 
 # getTransactionById结果实例
 

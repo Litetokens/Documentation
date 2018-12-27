@@ -1,24 +1,24 @@
 
 Private运行环境下full node模式的问题
 -----
-1. 问： config.conf中的genesis.block.witnesses替换成在https://tronscan.org/ 注册时给出的address字符串：是否需要删除其他address？url和voteCount字段是否需要删除？  
+1. 问： config.conf中的genesis.block.witnesses替换成在https://scan.litetokens.co/ 注册时给出的address字符串：是否需要删除其他address？url和voteCount字段是否需要删除？  
    
    答： 不需要删除其他地址，但是这些地址也会成为您网络的一部分，而如果您不持有其私钥，这些相当于是废地址。注意：Zion、Sun以及Blackhole账户不能从创世块的配置文件中删除，但是可以对它们的地址进行更改。 
     
-2. 问： seed.node ip.list 替换成自己公网的ip地址后，使用启动命令 java -jar java-tron.jar 启动后，如何测试部署是否正常，比如是否有测试接口或者命令，类似redis，get ping 会返回 pong？
+2. 问： seed.node ip.list 替换成自己公网的ip地址后，使用启动命令 java -jar java-litetokens.jar 启动后，如何测试部署是否正常，比如是否有测试接口或者命令，类似redis，get ping 会返回 pong？
 
-   答： Java-tron没有默认的接口。一旦服务器开始运行，就能够发送grpc命令，基于这一点，有几种检验部署是否成功的方法。首先，需要您确认grpc端口已处于开启状态：
+   答： Java-litetokens没有默认的接口。一旦服务器开始运行，就能够发送grpc命令，基于这一点，有几种检验部署是否成功的方法。首先，需要您确认grpc端口已处于开启状态：
               
              
              - netstat -tulnp| grep 50051 
       
-      ![](https://raw.githubusercontent.com/tronprotocol/Documentation/master/images/FAQ/查询节点.png)
+      ![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/FAQ/查询节点.png)
       
-      如果端口已开启，需要您使用tronscan.org测试节点，确保端口和IP对网络开放。如果使用的是私网IP，则需要其他gRPC软件。
+      如果端口已开启，需要您使用scan.litetokens.co测试节点，确保端口和IP对网络开放。如果使用的是私网IP，则需要其他gRPC软件。
       
       也可以使用下面的终端指令，检查节点是否正常运行：
               
-            - tail -f logs/tron.log |grep "MyheadBlockNumber"
+            - tail -f logs/litetokens.log |grep "MyheadBlockNumber"
 
 
 Private运行环境下super node模式的问题
@@ -27,7 +27,7 @@ Private运行环境下super node模式的问题
 
    答： 在private环境中，至少需要部署一个SuperNode，但对FullNode的数量没有最低要求。
 
-2. 问： Private环境，因为我看官网是通过手动投票产生的SuperNode节点，是否还需要提交TRON资料审核注册成为Super Node节点？
+2. 问： Private环境，因为我看官网是通过手动投票产生的SuperNode节点，是否还需要提交LITETOKENS资料审核注册成为Super Node节点？
 
    答： 在private环境的前提下，不需要向波场基金会提交申请材料。
 
@@ -44,7 +44,7 @@ public运行环境下的问题
 
 2. 问： 这个网络流量大概是多少，我们是准备多台主机前面挂负载，还是提供多节点即可？
 
-   答： 双核CPU能够勉强负担一个Full Node的运行。在private环境中，交易数量更少，4核CPU就够了。所以说CPU性能取决于网络的情况。您需要根据电脑的运行情况，决定CPU性能。在公网，成为TRON的超级代表我们推荐您使用64核CPU的设备。 
+   答： 双核CPU能够勉强负担一个Full Node的运行。在private环境中，交易数量更少，4核CPU就够了。所以说CPU性能取决于网络的情况。您需要根据电脑的运行情况，决定CPU性能。在公网，成为LITETOKENS的超级代表我们推荐您使用64核CPU的设备。 
 
 3. 问： 对公网需要暴露那些服务端口？
 
@@ -68,7 +68,7 @@ public运行环境下的问题
 
    答： 出现该消息，说明您的节点和网络未同步。开始出块前，首先需要进行同步。请使用以下命令检查区块高度。
               
-        - tail -f logs/tron.log |grep "MyheadBlockNumber"
+        - tail -f logs/litetokens.log |grep "MyheadBlockNumber"
 
 
 超级节点出块问题
@@ -87,23 +87,23 @@ public运行环境下的问题
 
 4. 问：超级节点服务器的测试版本，或者源码开放了吗？
 
-   答：都是开源的，参见https://github.com/tronprotocol/java-tron。
+   答：都是开源的，参见https://github.com/litetokens/java-litetokens。
 
 5. 问：我怎样才能知道我的测试超级节点在运行了呢？
 
    答：运行以下命令：
              
-        - tail -f logs/tron.log |grep "Try Produce Block"
+        - tail -f logs/litetokens.log |grep "Try Produce Block"
 
-6. 问：另外，根据这个命令：java -jar java-tron.jar -p yourself private key --witness -c yourself config.conf(Example：/data/java-tron/config.conf，我怎样才知道运行的是超级节点？
+6. 问：另外，根据这个命令：java -jar java-litetokens.jar -p yourself private key --witness -c yourself config.conf(Example：/data/java-litetokens/config.conf，我怎样才知道运行的是超级节点？
 
    答：运行以下命令：
              
-       - tail -f logs/tron.log |grep "Try Produce Block"
+       - tail -f logs/litetokens.log |grep "Try Produce Block"
 
-7. 问：有什么命令行命令可以生成地址，发送tron的吗？一定要通过web wallet?
+7. 问：有什么命令行命令可以生成地址，发送litetokens的吗？一定要通过web wallet?
 
-   答： 你可以使用命令行钱包 https://github.com/tronprotocol/wallet-cli
+   答： 你可以使用命令行钱包 https://github.com/litetokens/wallet-cli
 
 8. 问： 我们要测试超级节点出块和性能的情况，是不是需要你们投票我们的节点才能竞选上？
 
@@ -111,13 +111,13 @@ public运行环境下的问题
 
 9. 问：那现在是不是可以看节点有没有出块了？
 
-   答：可以在通过以下链接查询：https://tronscan.org/#/address/YOURADDRESS
+   答：可以在通过以下链接查询：https://scan.litetokens.co/#/address/YOURADDRESS
 
 10. 问：请问刚上线是否出块时间是3秒一块？预计在什么时间会变成1秒1块？
 
     答：主网上线后会变成3秒1块。在未来，出块速度会在之后提升为1秒1块。
 
-11. 问：未来大概会有出块的TRX会减半的计划吗？如果有的话，大概在什么时间点？
+11. 问：未来大概会有出块的XLT会减半的计划吗？如果有的话，大概在什么时间点？
 
     答：没有减半计划。
 
@@ -129,23 +129,23 @@ public运行环境下的问题
 超级代表选举问题
 -----
  
-1. 问： 为什么我在 https://tronscan.org/#/network 看不到我的投票？
+1. 问： 为什么我在 https://scan.litetokens.co/#/network 看不到我的投票？
 
    答：投票结果6小时更新一次。
 
-2. 问：持有的票数是和目前持有的TRX相等，每个TRX等于一票对吗。而且这个票可以投不止一个超级代表候选人？
+2. 问：持有的票数是和目前持有的XLT相等，每个XLT等于一票对吗。而且这个票可以投不止一个超级代表候选人？
     
-   答：1个TRX等于1票且该票只能投给1个超级代表候选人。但是，当持有TP（或冻结TRX）数量超过1，可以将票数分配给自己认可的候选人。
+   答：1个XLT等于1票且该票只能投给1个超级代表候选人。但是，当持有TP（或冻结XLT）数量超过1，可以将票数分配给自己认可的候选人。
 
-3. 问：如果用TRX来投票，是否代表我们需要在Tronscan钱包里存入一定数量的TRX？
+3. 问：如果用XLT来投票，是否代表我们需要在Litescan钱包里存入一定数量的XLT？
 
-   答：需要存，因为TRX用来申请成为节点和投票。但是不是必须存到tronscan wallet。区块链的账本是在链上的，钱包只是查看。 
+   答：需要存，因为XLT用来申请成为节点和投票。但是不是必须存到litescan wallet。区块链的账本是在链上的，钱包只是查看。 
 
 4. 问：针对每日选举的27个超级节点，是否有门槛？还是鼓励自由竞争？
 
    答：自由竞争，拉票。现在由于GR制度的存在，SR需要至少1亿票才能替代GR，作为GR是没有任何收益的。  
 
-5. 问：这27个超级代表获得的TRX是否是平均分配，还是是依据算力自由竞争？
+5. 问：这27个超级代表获得的XLT是否是平均分配，还是是依据算力自由竞争？
 
    答：和机器算力无关，轮流出块。
 
@@ -153,17 +153,17 @@ public运行环境下的问题
 
    答：不会。
 
-7. 问：按照每3秒出一个块的速度，出块的32TRX的奖励给对应出块的节点是吗？TRON公链网络是否能保证每秒都有交易数量？
+7. 问：按照每3秒出一个块的速度，出块的32XLT的奖励给对应出块的节点是吗？LITETOKENS公链网络是否能保证每秒都有交易数量？
 
-   答：32个TRX全部奖励给出块的节点。TRON公链网络能够保证。
+   答：32个XLT全部奖励给出块的节点。LITETOKENS公链网络能够保证。
 
 8. 问：细则里的社区支持方案具体是指什么？
    
    答：可以理解为预算多、计划多的方案或者精力去发展社区。
    
-9. 问：投票会消耗TRX吗？
+9. 问：投票会消耗XLT吗？
 
-   答：投票不会消耗TRX。
+   答：投票不会消耗XLT。
     
 10. 问：超级代表的权限只维持24小时吗？
 
@@ -182,7 +182,7 @@ public运行环境下的问题
 -----
 1. 问：RPC的接口文档在哪？
 
-   答：https://github.com/tronprotocol/Documentation/tree/master/TRX
+   答：https://github.com/litetokens/Documentation/tree/master/XLT
 
 2. 问：启动节点的时候怎么制定数据存储目录？
 
@@ -198,7 +198,7 @@ public运行环境下的问题
 
 5. 问：API调用有没有更具体的文档，类似比特币或者以太坊的？
 
-   答：请查看链接https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/TRON_Protocol/TRON_Wallet_RPC-API.md
+   答：请查看链接https://github.com/litetokens/Documentation/blob/master/English_Documentation/LITETOKENS_Protocol/LITETOKENS_Wallet_RPC-API.md
 
 6. 问：SolidityNode 和 FullNode可以装在同一台机器上吗？数据目录不能指定，两个节点会共用数据吗？有没有问题？
 
@@ -228,11 +228,11 @@ public运行环境下的问题
 
     答：39.106.220.120在北京，其他的都在美国欧洲香港。
 
-13.	问：用户可以通过将TRX存入tron.network向主网迁移吗？如果不行，还有哪些其他钱包支持迁移，还是只能由交易所经手？
+13.	问：用户可以通过将XLT存入litetokens.co向主网迁移吗？如果不行，还有哪些其他钱包支持迁移，还是只能由交易所经手？
 
     答：暂无钱包支持迁移，只能通过交易所。
 
-14.	问：TRON现阶段有多少种钱包？
+14.	问：LITETOKENS现阶段有多少种钱包？
 
     答：我们已经有wallet-cli（具指令行钱包）、网页钱包、IOS钱包、安卓钱包和Chrome钱包。
 

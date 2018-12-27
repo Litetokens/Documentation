@@ -8,7 +8,7 @@ Version 0.1
 
 ### 合约运行的网络
 
-由于在波场网络协议中，部署和调用合约都需要消耗相应的资源(内存，CPU，存储等)，所以建议开发者在搭建自己的私有网络进行智能合约的调试和测试，在确认合约可用之后，再将合约部署在测试网或主网之上。搭建私有网络可参考[Deployment of FullNode(PrivateNet: Just one witness node) on the one host.](https://github.com/tronprotocol/TronDeployment)
+由于在波场网络协议中，部署和调用合约都需要消耗相应的资源(内存，CPU，存储等)，所以建议开发者在搭建自己的私有网络进行智能合约的调试和测试，在确认合约可用之后，再将合约部署在测试网或主网之上。搭建私有网络可参考[Deployment of FullNode(PrivateNet: Just one witness node) on the one host.](https://github.com/litetokens/LitetokensDeployment)
 
 该私有链的产块节点的地址：TPL66VK2gCXNCD7EJg9pgJRfqcRazjhUZY
 
@@ -30,7 +30,7 @@ wallet-cli是波场网络的命令行钱包，开发者可以使用wallet-cli在
 
 ## 智能合约的开发
 编写智能合约，我们暂时推荐使用[Remix](http://remix.ethereum.org/)进行编译、调试等前期的开发工作。
-当合约开发完成之后，可以把合约复制到[SimpleWebCompiler](https://github.com/tronprotocol/tron-demo/tree/master/SmartContractTools/SimpleWebCompiler)中进行编译，获取ABI和ByteCode。
+当合约开发完成之后，可以把合约复制到[SimpleWebCompiler](https://github.com/litetokens/litetokens-demo/tree/master/SmartContractTools/SimpleWebCompiler)中进行编译，获取ABI和ByteCode。
 我们提供一个简单的数据存取的合约代码示例，以这个示例来说明编译、部署、调用的步骤。
 ```
 pragma solidity ^0.4.0;
@@ -49,7 +49,7 @@ contract DataStore {
 ```
 
 ### 启动私有链
-确保前提条件中，私有链已经在本地部署完成。可以检查FullNode/logs/tron.log中，是否有持续产块的log信息出现：“Produce block successfully”
+确保前提条件中，私有链已经在本地部署完成。可以检查FullNode/logs/litetokens.log中，是否有持续产块的log信息出现：“Produce block successfully”
 
 ### 开发智能合约
 把上述代码复制到remix中编译，调试，确保代码的逻辑是自己需要的，编译通过，没有错误
@@ -63,7 +63,7 @@ contract DataStore {
 ```
 shell
 # 下载源代码
-git clone https://github.com/tronprotocol/wallet-cli
+git clone https://github.com/litetokens/wallet-cli
 cd  wallet-cli
 # 编译
 ./gradlew build
@@ -91,7 +91,7 @@ getbalance
 ```
 Shell
 # 合约部署指令
-DeployContract contract_name ABI byteCode constructor params isHex fee_limit consume_user_resource_percent origin_energy_limit value token_value token_id(e.g: TRXTOKEN, use # if don't provided) <library:address,library:address,...>
+DeployContract contract_name ABI byteCode constructor params isHex fee_limit consume_user_resource_percent origin_energy_limit value token_value token_id(e.g: XLTTOKEN, use # if don't provided) <library:address,library:address,...>
 
 # 参数说明
 contract_name:自己制定的合约名
@@ -100,7 +100,7 @@ bytecode:从SimpleWebCompiler中获取到的二进制代码
 constructor:部署合约时，会调用构造函数，如果需要调用，就把构造函数的参数类型填写到这里，例如：constructor(uint256,string)，如果没有，就填写一个字符#
 params：构造函数的参数，使用逗号分隔开来，例如  1,"test"   ，如果没有构造函数，就填写一个字符#
 isHex: 输入参数是否转为十六进制
-fee_limit:本次部署合约消耗的TRX的上限，单位是SUN(1 SUN = 10^-6 TRX)，包括CPU资源、STORAGE资源和可用余额的消耗
+fee_limit:本次部署合约消耗的XLT的上限，单位是SUN(1 SUN = 10^-6 XLT)，包括CPU资源、STORAGE资源和可用余额的消耗
 consume_user_resource_percent:指定的使用该合约用户的资源占比，是[0, 100]之间的整数。如果是0，则表示用户不会消耗资源。如果开发者资源消耗完了，才会完全使用用户的资源。
 origin_energy_limit: 开发者设置的在一次合约调用过程中自己消耗的energy的上限，必须大于0。对于之前老的合约，没有提供设置该值的参数，会存成0，但是会按照1000万energy上限计算，开发者可以通过updateEnergyLimit接口重新设置该值，设置新值时也必须大于0
 value:在部署合约时，给该合约转账金额
@@ -125,14 +125,14 @@ Your smart contract address will be: TTWq4vMEYB2yibAbPV7gQ4mrqTyX92fha6
 ```
 Shell
 # 调用合约指令
-TriggerContract contract_address method args isHex fee_limit value token_value token_id(e.g: TRXTOKEN, use # if don't provided)
+TriggerContract contract_address method args isHex fee_limit value token_value token_id(e.g: XLTTOKEN, use # if don't provided)
 
 # 参数说明
 contract_address:即之前部署过合约的地址，格式 base58，如：TTWq4vMEYB2yibAbPV7gQ4mrqTyX92fha6
 method:调用的函数签名，如set(uint256,uint256)或者 fool()，参数使用','分割且不能有空格
 args:如果非十六进制，则自然输入使用','分割且不能有空格，如果是十六进制，直接填入即可
 is_hex：输入参数是否为十六进制，false 或者 true
-fee_limit:和deploycontract的时候类似，表示本次部署合约消耗的TRX的上限，单位是SUN(1 SUN = 10^-6 TRX)，包括CPU资源、STORAGE资源和可用余额的消耗。
+fee_limit:和deploycontract的时候类似，表示本次部署合约消耗的XLT的上限，单位是SUN(1 SUN = 10^-6 XLT)，包括CPU资源、STORAGE资源和可用余额的消耗。
 value:在部署合约时，给该合约转账金额
 token_value: 转trc10 token的个数
 token_id: 转trc10 token的tokenid
