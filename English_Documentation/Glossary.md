@@ -3,7 +3,7 @@
 ## Address	
 Account credentials on LITETOKENS's network are given by a key pair, which consists of a private key and a public key, the latter being derived from the former through an algorithm. The public key is usually used for session key encryption, signature verification and encrypting data that could be decrypted by a corresponding private key.
 ## Allowance	
-Block production rewards are sent to a sub-account. SRs can claim their reward on Litescan.
+Block production rewards are sent to a sub-account. LEs can claim their reward on Litescan.
 ## API	
 API is mainly used for the development of client terminals. With API support, token issuance platform can be designed by developers themselves.	
 ## Application Layer	
@@ -58,8 +58,8 @@ Scalability is a feature of the LITETOKENS Protocol. It is the capability of a s
 The tech team of LITETOKENS designed a unique distributed storage protocol consisting of block storage and state storage. The notion of graph database was introduced into the design of the storage layer to better meet the need for diversified data storage in the real world.  
 ## Sun	
 Sun, abbreviated as S, replaced drop as the smallest unit of XLT.
-## Super Representative	
-The 27 Super Representatives are the bookkeepers on LITETOKENS network. They are responsible for the verification and packing of all transaction data broadcasted on the network, similar to witness in DPOS systems. Information of the SRs are posted on LITETOKENS network for public access. The most convenient way to check out the list of SRs and their information is by using [LITETOKENS’s Blockchain explorer](https://scan.litetokens.co/#/).	
+## Envoy	
+The 27 Envoys are the bookkeepers on LITETOKENS network. They are responsible for the verification and packing of all transaction data broadcasted on the network, similar to witness in DPOS systems. Information of the LEs are posted on LITETOKENS network for public access. The most convenient way to check out the list of LEs and their information is by using [LITETOKENS’s Blockchain explorer](https://scan.litetokens.co/#/).	
 ## Throughput
 High throughput is a feature of LITETOKENS mainnet. It is also known as TPS, namely the maximum transaction capacity in a second.
 ## Timestamp	
@@ -73,7 +73,7 @@ Transaction refers to the process of token transfer between different accounts.
 ## Transaction Broadcasting	
 Transaction information is verified by nodes and broadcasted in the blockchain network.
 ## LITETOKENS Power	
-LITETOKENS Power (TP) can be obtained from balance freezing. All users in LITETOKENS's network are entitled to vote for Super Representatives they approve of. To vote, TP is needed, the amount of which is determined by the amount of frozen asset. Calculation of TP: 1 frozen XLT equals to 1 TP. When users unfreeze all frozen balance, they also lose their TPs, which invalidates their votes for the current voting round. To prevent invalid votes, users can refreeze balance.
+LITETOKENS Power (TP) can be obtained from balance freezing. All users in LITETOKENS's network are entitled to vote for Envoys they approve of. To vote, TP is needed, the amount of which is determined by the amount of frozen asset. Calculation of TP: 1 frozen XLT equals to 1 TP. When users unfreeze all frozen balance, they also lose their TPs, which invalidates their votes for the current voting round. To prevent invalid votes, users can refreeze balance.
 ##LVM（LITETOKENS Virtual Machine）
 LITETOKENS Virtual Machine (LVM), is a lightweight, Turing complete virtual machine developed for Litetokens’s ecosystem, aimed at providing millions of global developers with custom-built blockchain system which is efficient, convenient, stable, secure and scalable.
 	

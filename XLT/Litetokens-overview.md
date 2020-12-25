@@ -29,7 +29,7 @@ c.  Send tokens to a new address to create account.
 # 2. LITETOKENS’s network structure
 
 ## 2.1 Node types
-There are three types of nodes on LITETOKENS’s network: Witnesses(Super Representatives), Full Nodes and Solidity Nodes. A witness is responsible for block production; a full node provides APIs, and broadcasts transactions and blocks; a solidity node synchronizes irrevocable blocks and provides inquiry APIs.
+There are three types of nodes on LITETOKENS’s network: Witnesses(Envoys), Full Nodes and Solidity Nodes. A witness is responsible for block production; a full node provides APIs, and broadcasts transactions and blocks; a solidity node synchronizes irrevocable blocks and provides inquiry APIs.
 
 ## 2.2 Mainnet and testnet
 
@@ -268,10 +268,10 @@ LITETOKENS will always support swapping ERC20 XLT to LITETOKENS Mainnet XLT.
 - For users: Please deposit your ERC20 in an exchange that supports the swap.
 - For Exhanges: Please contact LITETOKENS to swap your ERC20 XLT to Mainnet XLT
 
-# 13. Super Representatives and Voting
-The Super Representatives(SR) take important roles to build and operate on LITETOKENS network such as block generation and transaction packing. They receive some XLT as rewards. Every 3 seconds a new block is generated. The top 27 SRs receive 32 XLT per block in sequence, and the top 127 SRs share 32 XLT proportional to the amount of votes they hold. This means that the top 27 SRs will be rewarded over 32 XLT per block.
+# 13. Litetokens Envoys and Voting
+The Litetokens Envoys(LE) take important roles to build and operate on LITETOKENS network such as block generation and transaction packing. They receive some XLT as rewards. Every 3 seconds a new block is generated. The top 27 LEs receive 32 XLT per block in sequence, and the top 127 LEs share 32 XLT proportional to the amount of votes they hold. This means that the top 27 LEs will be rewarded over 32 XLT per block.
 
-All XLT holders can vote for SRs as long as they have Litetokens Power available. Litetokens Power can be gained by freezing XLT. To vote for SR candidates you can use your favorite wallet or [LitetokensScan, the official Web wallet](https://scan.litetokens.co).
+All XLT holders can vote for LEs as long as they have Litetokens Power available. Litetokens Power can be gained by freezing XLT. To vote for LE candidates you can use your favorite wallet or [LitetokensScan, the official Web wallet](https://scan.litetokens.co).
 
 See also: https://github.com/litetokens/Documentation/blob/master/English_Documentation/LITETOKENS_Blockchain_Explorer/Guide_to_voting_on_the_new_blockchain_explorer.md
 

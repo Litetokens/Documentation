@@ -92,7 +92,7 @@ VoteWitnessContract: voter address and list of candidates which includes candida
 6.4 Returns
 Transaction: returns transaction of votes. Request broadcasting after the transaction is signed by wallet.  
 6.5 Function
-Vote. Coin holders can only vote for Super Representative candidates, with no more votes than the amount of frozen balance (see also 25. Balance freeze).
+Vote. Coin holders can only vote for Envoy candidates, with no more votes than the amount of frozen balance (see also 25. Balance freeze).
 
 ## 7. Token issuance
 7.1 Interface statement
@@ -110,7 +110,7 @@ Sample:
 With the above command the token named abc is issued with a total capitalization of 1 million tokens at an exchange rate of 1:1 to xlt. Its offering is from May 31-June 30, 2018. It is described as abcdef and can be found at a.com.  
 A maximum of 1000 bandwidth points can be charged from the issuer’s account per account per day. The maximum bandwidth points to be charged from the issuer per day is 1000,000. 200,000 tokens will be locked for 180 days while another 300,000 tokens will be locked for 365 days.
 
-## 8. Query of list of Super Representative candidates  
+## 8. Query of list of Envoy candidates  
 8.1 Interface statement
 rpc ListWitnesses (EmptyMessage) returns (WitnessList) {};  
 8.2 Nodes
@@ -122,7 +122,7 @@ WitnessList: list of witnesses including detailed information of the candidates.
 8.5 Function
 Query of all candidates prior to voting returning detailed information on each candidate for users’ reference.
 
-## 9. Application for Super Representative
+## 9. Application for Envoy
 9.1 Interface statement
 rpc CreateWitness (WitnessCreateContract) returns (Transaction) {}; 
 9.2 Node
@@ -132,9 +132,9 @@ WitnessCreateContract: account address and Url.
 9.4 Returns
 Transaction: Returns a transaction of candidate application. Request broadcasting after the transaction is signed by wallet.  
 9.5 Function
-All users with an account created on the blockchain can apply to become LITETOKENS’s Super Representative candidate.
+All users with an account created on the blockchain can apply to become LITETOKENS’s Envoy candidate.
 
-## 10. Information update of Super Representative candidates
+## 10. Information update of Envoy candidates
 10.1 Interface statement
 rpc UpdateWitness (WitnessUpdateContract) returns (Transaction) {};  
 10.2 Node
@@ -142,9 +142,9 @@ Fullnode.
 10.3 Parameters
 WitnessUpdateContract: an account address and Url. 
 10.4 Returns
-Transaction: returns transaction of SR application. Request broadcasting after the transaction is signed by wallet. 
+Transaction: returns transaction of LE application. Request broadcasting after the transaction is signed by wallet. 
 10.5 Function
-Updating the url of SRs.
+Updating the url of LEs.
 
 ## 11. Token transfer
 11.1 Interface statement rpc TransferAsset (TransferAssetContract) returns (Transaction){};  
@@ -349,7 +349,7 @@ WithdrawBalanceContract: address.
 27.4 Returns
 Transaction: returns withdraw XLT transaction. Request transaction broadcasting after signed by wallet.  
 27.5 Function
-This interface is only accessible to Super Representatives. Super Representative can obtain reward after successful account keeping. Instead of saved to account balance, rewards will be held independently in account allowance, with 1 permitted withdrawal to account balance every 24 hours.
+This interface is only accessible to Envoys. Envoy can obtain reward after successful account keeping. Instead of saved to account balance, rewards will be held independently in account allowance, with 1 permitted withdrawal to account balance every 24 hours.
 
 ## 28. Unfreeze balance
 28.1 Interface statement  

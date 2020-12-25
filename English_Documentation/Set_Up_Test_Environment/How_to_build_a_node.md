@@ -69,7 +69,7 @@ java -jar java-litetokens.jar
   1. After the building finishes, locate `FullNode` in the project structure view panel, which is on the path `java-litetokens/src/main/java/org.litetokens/program/FullNode`.
   2. Select `FullNode`, right click on it, and select `Run 'FullNode.main()'`, then `FullNode` starts running.
 
-### How to run a SR Node
+### How to run a LE Node
 * use master branch
 * You should modify the config.conf
   1. genesis.block.witnesses replace to yourself address
@@ -236,7 +236,7 @@ java -jar java-litetokens.jar
 
 It is almost the same as that does in the private testnet, except that the IPs in the `config.conf` are officially declared by LITETOKENS.
 
-### Running a SR Node
+### Running a LE Node
 
 * Use the executable JAR(Recommended way)
 

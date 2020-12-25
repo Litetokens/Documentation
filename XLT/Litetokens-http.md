@@ -31,10 +31,10 @@ Parameters：address should be converted to a hex string
 Return value：Account Object
 
 /walletsolidity/listwitnesses
-Function：Query the list of super representatives
+Function：Query the list of envoys
 demo: curl -X POST  http://127.0.0.1:8091/walletsolidity/listwitnesses
 Parameters：None
-Return value：List of all super representatives
+Return value：List of all envoys
 
 /walletsolidity/getassetissuelist
 Function：Query the list of Tokens
@@ -130,7 +130,7 @@ Parameters：account_name is the name of the account, converted into a hex strin
 Return value：modified Transaction Object
 
 /wallet/votewitnessaccount
-Function：Vote on the super representative
+Function：Vote on the envoy
 demo：curl -X POST  http://127.0.0.1:8090/wallet/votewitnessaccount -d '{
 "owner_address":"41d1e7a6bc354106cb410e65ff8b181c600ff14292", 
 "votes": [{"vote_address": "41e552f6487585c2b58bc2c9bb4492bc1f17132cd0", "vote_count": 5}]
@@ -164,10 +164,10 @@ Parameters：Owner_address is an activated account，converted to a hex String; 
 Return value：Create account Transaction raw data
 
 /wallet/createwitness
-Function：Apply to become a super representative
+Function：Apply to become a envoy
 demo：curl -X POST  http://127.0.0.1:8090/wallet/createwitness -d '{"owner_address":"41d1e7a6bc354106cb410e65ff8b181c600ff14292", "url": "007570646174654e616d6531353330363038383733343633"}'
 Parameters：owner_address is the account address of the applicant，converted to a hex string；url is the official website address，converted to a hex string
-Return value：Super Representative application Transaction raw data
+Return value：Envoy application Transaction raw data
 
 /wallet/transferasset
 Function：Transfer Token
@@ -251,7 +251,7 @@ owner_address address to unfreeze Tokens for，converted to a hex string
 Return value：Unfreeze Token transaction raw data
 
 /wallet/withdrawbalance
-Function：Withdraw Super Representative rewards, useable every 24 hours.
+Function：Withdraw Envoy rewards, useable every 24 hours.
 demo：curl -X POST http://127.0.0.1:8090/wallet/withdrawbalance -d '{
 "owner_address":"41e472f387585c2b58bc2c9bb4492bc1f17342cd1",
 }'
@@ -345,10 +345,10 @@ Parameters：Transaction ID.
 Return value：Transaction information.
 
 wallet/listwitnesses
-Function：Query the list of Super Representatives
+Function：Query the list of Envoys
 demo: curl -X POST  http://127.0.0.1:8090/wallet/listwitnesses
 Parameters：None
-Return value：List of all Super Representatives
+Return value：List of all Envoys
 
 /wallet/getassetissuelist
 Function：Query the list of Tokens
@@ -369,7 +369,7 @@ Parameters：None
 Return value：Total number of transactions.
 
 /wallet/getnextmaintenancetime
-Function：Get the time of the next Super Representative vote
+Function：Get the time of the next Envoy vote
 demo: curl -X POST  http://127.0.0.1:8090/wallet/getnextmaintenancetime
 Parameters：None
 Return value: number of milliseconds until the next voting time.

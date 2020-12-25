@@ -22,11 +22,11 @@ Official launch of the genesis block will be on June 25 10:00 (GMT+8).
 
 Token migration:
 + Exchanges: ERC20 XLT tokens will be transferred to LITETOKENS. LITETOKENS will transfer mainnet tokens to exchanges.
-+ SR: Express XLT migration channel for Super Representative candidates can ensure unimpeded application for candidacy and a certain amount of initial votes.
++ LE: Express XLT migration channel for Envoy candidates can ensure unimpeded application for candidacy and a certain amount of initial votes.
 
-## 4. SR Elections & Rewards
+## 4. LE Elections & Rewards
 
-Users vote for SR candidates using wallets. SRs are responsible for transaction packaging and block generation.
+Users vote for LE candidates using wallets. LEs are responsible for transaction packaging and block generation.
 
 # Developer
 
@@ -42,7 +42,7 @@ Promote wallets for community and users to test and experiment, get feedback and
 On June 15th (GMT+8), the LITETOKENS team will review and select the official recommended wallet for each platform. The official recommended wallets can be submitted at any time, and LITETOKENS can add recommendations at any time. 
 
 4.	Wallet officially launched (June 25, GMT+8)  
-XLT users vote for SR candidates using wallets.
+XLT users vote for LE candidates using wallets.
 
 **Note** 
 1.	Please note that you have to finish development before May 31st (GMT+8). 

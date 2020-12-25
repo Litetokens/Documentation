@@ -39,7 +39,7 @@ Questions regarding operation in public networks
        Is a good practice to limit JVM heap size to fit inside one NUMA region (Around 1 TB on the bigger machines). If its JVM spans NUMA regions, GC will take much longer.
 
 2.	Q: What performance does a processor need to have in order to run the node software?
-    A: At least 2 core CPUs are required to run a full node, at the minimum performance. If you are running on a private environment, with fewer transactions, then you will be fine with 4 CPU cores. So, the amount of network requests determines the CPU performance required to run the nodes. You will need to monitor your machine to decide the best requirements. In the PUBLIC NETWORK, LITETOKENS recommend at least 64CPU cores machine for a Super Representative to be approved.
+    A: At least 2 core CPUs are required to run a full node, at the minimum performance. If you are running on a private environment, with fewer transactions, then you will be fine with 4 CPU cores. So, the amount of network requests determines the CPU performance required to run the nodes. You will need to monitor your machine to decide the best requirements. In the PUBLIC NETWORK, LITETOKENS recommend at least 64CPU cores machine for an Envoy to be approved.
 
 
 3.	Q: What ports should be opened to be externally accessible?
@@ -68,7 +68,7 @@ Questions regarding block generation by Super Nodes
     A: Yes, Super Nodes produce blocks in rotation. Within current testing environment, one block is produced every 3 seconds.
 
 2.	Q: If a Super Node cannot connect to the LITETOKENS network, how long will it take to be able to connect to the network again?
-    A: An SR's recovery depends only on it's connection speeds and it has nothing to do with the LITETOKENS network.
+    A: An LE's recovery depends only on it's connection speeds and it has nothing to do with the LITETOKENS network.
 
 3.	Q: What’s the formula of the miss rate of Super Nodes’ block production?
     A: “The number of blocks which supposedly should have been produced but aren't” will be taken into account. The number will keep accumulating and not be cleared.
@@ -101,25 +101,25 @@ Questions regarding block generation by Super Nodes
 11.	Q: Is it within LITETOKENS’s plan to reduce the reward of XLT for block production by half? If yes, when?
     A: The LITETOKENS Foundation is currently not planning to halve the XLT reward per block in the future.
 
-12.	Q: If any of the 27 nodes malfunctions, will it be detected automatically and disqualified from elections? Will it remain as a Super Representative if such thing occur? If it won't, how and when it can regain the status?
-   A: An event of incompetency & missed block rates will be kept permanently and will be public. We expect voters to make a rational judgement by not voting for that particular SR in future voting cycles.
+12.	Q: If any of the 27 nodes malfunctions, will it be detected automatically and disqualified from elections? Will it remain as an Envoy if such thing occur? If it won't, how and when it can regain the status?
+   A: An event of incompetency & missed block rates will be kept permanently and will be public. We expect voters to make a rational judgement by not voting for that particular LE in future voting cycles.
 
-Questions on the Super Representatives election
+Questions on the Envoys election
 -----
 
 1.	Q: Why I can't see any votes for my node at https://scan.litetokens.co/#/network even though I’ve just submitted 2 million votes for it in the current voting round?
     A: Results are updated every 6 hours, which will be announce only after this round of voting.
 
-2.	Q: The amount of votes one holds is equivalent to the amount of his/her holding of XLT, so one vote can be made for one XLT, right? And the vote can be made to more than one Super Representative candidate?
+2.	Q: The amount of votes one holds is equivalent to the amount of his/her holding of XLT, so one vote can be made for one XLT, right? And the vote can be made to more than one Envoy candidate?
     A: A: Every XLT equals one vote can only be casted for one candidate. However, if you have more then one TP( or frozen XLT), you can spread the votes among all the candidates you want to.
 
 3.	Q: Since XLT is required to obtain the right to vote, do we need to deposit a certain amount of XLT into Litescan wallet? 
     A:Yes, you need to have XLT in order to be able to freeze them. But no, since your balance is held on the blockchain and not on Litescan you can use any other wallet or means to freeze your XLT.
 
-4.	Q: Is there a threshold for the daily election of 27 Super Representatives? Or is it encouraged to compete freely?
-    A: Free competition. Solicit the votes if you want them. Due to the existence of the GR system, an SR needs at least 100 million votes to replace a GR. There is no reward for GRs’ work.
+4.	Q: Is there a threshold for the daily election of 27 Envoys? Or is it encouraged to compete freely?
+    A: Free competition. Solicit the votes if you want them. Due to the existence of the GR system, an LE needs at least 100 million votes to replace a GR. There is no reward for GRs’ work.
 
-5.	Q: Will XLT rewards be distributed evenly among these 27 Super Representatives or based on their hashrate?
+5.	Q: Will XLT rewards be distributed evenly among these 27 Envoys or based on their hashrate?
     A: As they produce blocks in rotation, the distribution of reward is irrelevant to hashrate.
 
 6.	Q: If large mining operations run for the election, is hashrate exceeding 50% a possibility?
@@ -131,8 +131,8 @@ Questions on the Super Representatives election
 8.	Q: Does voting consume XLT?
     A: Voting does not consume your XLT.
 
-9.	Q: Does the status of Super Representatives only last for 24 hours?
-    A:  No. The status of Super Representatives lasts for 6 hours. But if the results of the next election remains the same, the status will be maintained for another 6 hours.
+9.	Q: Does the status of Envoys only last for 24 hours?
+    A:  No. The status of Envoys lasts for 6 hours. But if the results of the next election remains the same, the status will be maintained for another 6 hours.
 
 10.	Q: Information on my node is not included in either of the two configuration nodes, namely build/resources/main/config.conf and build/resources/main/config.conf in the wallet. Is it still possible to discover my node and proceed to block production?
     A: Set your own private key in the configuration file. With a successful vote a block will be produced.
@@ -192,8 +192,8 @@ Others
 
 16. Q: The people outside of the top 27 but in the top 100, are they ranked in order, 28-100 or is there an algorithm to just select who would be next if someone is voted out?
 
-    A: For testnet we now just simply pick top 27 nodes with most votes. For mainnet and future testnet we may chose a different algorithm to add some randomness to part of the SR election.
+    A: For testnet we now just simply pick top 27 nodes with most votes. For mainnet and future testnet we may chose a different algorithm to add some randomness to part of the LE election.
 
 17. Q: Is a well formed technical plan all we need, or must we have the hardware before applying.
 
-    A: The technical plan has two parts:1 before June 26 the first election & 2 after June 26 the first election. The second part just need the plan. For the first part you can only have the plan for now but only after you have hardware we can test your node and tell everyone "yes, they do have a test node."Applying to be a SR has no direct connection to qualifying a SR.
+    A: The technical plan has two parts:1 before June 26 the first election & 2 after June 26 the first election. The second part just need the plan. For the first part you can only have the plan for now but only after you have hardware we can test your node and tell everyone "yes, they do have a test node."Applying to be a LE has no direct connection to qualifying a LE.

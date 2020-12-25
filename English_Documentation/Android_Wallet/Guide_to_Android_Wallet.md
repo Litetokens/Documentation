@@ -59,7 +59,7 @@ Cold Wallet Setup
 
 ![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/查看相关信息/区块和交易信息.png)
 
-## Check SR candidate information  
+## Check LE candidate information  
 
 ![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/查看相关信息/查看SP候选信息.png)
 
@@ -122,18 +122,18 @@ Users can vote in hot wallet setup.
 
 6. Return to balance page and click the vote button on the left-hand side.
 ![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/9.点击投票按钮.png)
-7. Enter SR candidate page.
-![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/10.点击投票按钮之后进入超级代表候选人list页面，candidates一栏下显示的是所有待投票竞选的SR候选人.jpg)
-![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/11.此为your%20votes页面下的显示情况，因为我们还没有对任何一个SR候选节点进行投票，所以列表中空空如也.png)
-8. Select a SR candidate and enter the amount of votes.
-![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/12.我们回到candidates一栏，任意选择一个SR候选人进行投票演示，以list中首个系节点为例，注，candidates%20list%20的排列是以票数多少为顺序.jpg)
+7. Enter LE candidate page.
+![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/10.点击投票按钮之后进入超级代表候选人list页面，candidates一栏下显示的是所有待投票竞选的LE候选人.jpg)
+![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/11.此为your%20votes页面下的显示情况，因为我们还没有对任何一个LE候选节点进行投票，所以列表中空空如也.png)
+8. Select a LE candidate and enter the amount of votes.
+![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/12.我们回到candidates一栏，任意选择一个LE候选人进行投票演示，以list中首个系节点为例，注，candidates%20list%20的排列是以票数多少为顺序.jpg)
 9. Tap SUBMIT, enter the amount of votes and your password and submit votes.
 ![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/13.输入希望为此节点投出的票数.jpg)
 ![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/14.点击submit%20votes之后要求输入账户密码进行确认投票.jpg)
 ![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/16.png)
 10. You can check your votes in the candidates tab and in the votes tab.
 ![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/17.为此候选人投过票后此候选人右侧显示你为其透过的票数.jpg)
-![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/18.这个时候我们可以看到在your%20votes一栏中与投票前不同的是出现了我们为其投过票的SR候选人信息.jpg)
+![](https://raw.githubusercontent.com/litetokens/Documentation/master/images/Wallet_for_Android/投票/18.这个时候我们可以看到在your%20votes一栏中与投票前不同的是出现了我们为其投过票的LE候选人信息.jpg)
 
 ## Initiate transfer
 

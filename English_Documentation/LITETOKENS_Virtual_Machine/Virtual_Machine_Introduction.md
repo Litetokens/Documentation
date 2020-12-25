@@ -2,7 +2,7 @@
 
 LITETOKENS Virtual Machine (LVM) is a lightweight, Turing complete virtual machine developed for the LITETOKENS's ecosystem. Its goal is to provide millions of global developers with a custom-built blockchain system that is efficient, convenient, stable, secure and scalable.
 
-LVM can connect seamlessly with existing development ecosystem and supports DPOS. LVM is able to be compatible with EVM environment in the beginning, so that instead of learning a new programming language, developers can develop, debug and compile smart contracts in a Remix environment with Solidity and other languages. Once you’ve built and uploaded your smart contract to LITETOKENS’s mainnet, it will be executed on the LVM of the SR node to be isolated from external connections.
+LVM can connect seamlessly with existing development ecosystem and supports DPOS. LVM is able to be compatible with EVM environment in the beginning, so that instead of learning a new programming language, developers can develop, debug and compile smart contracts in a Remix environment with Solidity and other languages. Once you’ve built and uploaded your smart contract to LITETOKENS’s mainnet, it will be executed on the LVM of the LE node to be isolated from external connections.
 
 Furthermore, LVM employs the concept of Bandwidth. Different from the gas mechanism on Ethereum’s  EVM,  operations of transaction or smart contracts on LVM are free, with no tokens consumed. Technically, executable computation capacity on LVM is not restricted by total holding of tokens.
 

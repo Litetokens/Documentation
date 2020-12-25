@@ -1,14 +1,14 @@
 ## Intro
 
-Litescan provides a way for Super Representatives to publish their information right where the voters are, on Litescan!
+Litescan provides a way for Envoys to publish their information right where the voters are, on Litescan!
 
-Super Representatives can use this template to build a static page which will be shown on Litescan. The link will be placed in the voting overview page right next to the name of SR.
+Envoys can use this template to build a static page which will be shown on Litescan. The link will be placed in the voting overview page right next to the name of LE.
 
-The Super Representatives can manage their own content by editing files in the Github repository.
+The Envoys can manage their own content by editing files in the Github repository.
 
 ## How to use
 
-__This guide assumes that you already have an account with Super Representative (candidate) status.__
+__This guide assumes that you already have an account with Envoy (candidate) status.__
 
 ### Step 1: Copy/Fork the template on Github
 

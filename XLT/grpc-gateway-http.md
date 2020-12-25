@@ -70,7 +70,7 @@ Demo: curl -X POST http://127.0.0.1:18890/wallet/createaccount -d '{"owner_addre
 
 
 Wallet/createwitness
-Function: users can apply to become a Super Representative, which costs 9999 XLT.
+Function: users can apply to become an Envoy, which costs 9999 XLT.
 Parameters: owner_address, address of the applicant, should be in base64 format; url, url of the applicant’s website, should be in base64 format.
 Demo: curl -X POST http://127.0.0.1:18890/wallet/createwitness -d '{"owner_address":"QYgZmb8EtAG27PTQy5E3TXNTYCcy", "url": "d3d3Lm5ld3VybC5jb20="}'
 
@@ -95,7 +95,7 @@ Parameters: owner_address should be in base64 format.
 Demo: curl -X POST http://127.0.0.1:18890/wallet/unfreezeasset -d '{"owner_address" : "QVHyqChqzKYaik1etWXHerLDoP69"}'
 
 Wallet/withdrawbalance
-Function: Withdraws rewards for an SR
+Function: Withdraws rewards for an LE
 Parameters: owner_address should be converted to base64 format.
 Demo: curl -X POST http://127.0.0.1:18890/wallet/withdrawbalance -d '{"owner_address" : "QVHyqChqzKYaik1etWXHerLDoP69"}'
 
@@ -154,7 +154,7 @@ Function: Query transactions by transaction ID
 Parameters: value is the transaction ID, which can be obtained through hashing the raw_data of the transaction; value should be in base64 format.
 Demo: curl -X POST http://127.0.0.1:18890/wallet/gettransactionbyid -d '{"value" : "JTqX9taV7RNDyZbwGsN4BsMthBqoBaqnROvCQtHYOyg="}'
 
-Inquire list of all Super Representatives: /wallet/listwitnesses
+Inquire list of all Envoys: /wallet/listwitnesses
 Demo: curl -X POST http://127.0.0.1:18890/wallet/listwitnesses
 Parameters:
 
@@ -170,7 +170,7 @@ Inquire total amount of transactions: /wallet/totaltransaction
 Demo: curl -X POST http://127.0.0.1:18890/wallet/totaltransaction
 Parameters:
 
-Inquire the next maintenance time of a Super Representative: /wallet/getnextmaintenancetime
+Inquire the next maintenance time of an Envoy: /wallet/getnextmaintenancetime
 Demo: curl -X POST http://127.0.0.1:18890/wallet/getnextmaintenancetime
 Parameters:
 
@@ -203,7 +203,7 @@ Inquire account info: /walletsolidity/getaccount
 Demo: curl -X POST http://127.0.0.1:18890/walletsolidity/getaccount -d '{"address" : "QYgZmb8EtAG27PTQy5E3TXNTYCcy"}'
 Parameters: address should be in base64 format.
 
-Inquire list of all Super Representatives: /walletsolidity/listwitnesses
+Inquire list of all Envoys: /walletsolidity/listwitnesses
 Demo: curl -X POST http://127.0.0.1:18890/walletsolidity/listwitnesses
 Parameters:
 

@@ -70,7 +70,7 @@ or Translation `TransferContract`contains 3 parameters：
 
 `WitnessCreateContract`contains 2 parameters：
 `owner_address`：the contract holder's address, for example： *“0xu82h…7237”*.
-`url`：the URL of the Super Representative(SR) candidate.
+`url`：the URL of the Envoy(LE) candidate.
 
      message WitnessCreateContract {
        bytes owner_address = 1;

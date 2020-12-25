@@ -33,7 +33,7 @@ If you need more TP or bandwidth temporarily, you can top up frozen funds to get
 
 # Vote
 
-Every account in the LITETOKENS network enjoys the right to vote and you can vote for the Super Representatives (SRs) after your own heart. You need TP to vote and the amount of TP depends on your frozen funds.
+Every account in the LITETOKENS network enjoys the right to vote and you can vote for the Envoys (LEs) after your own heart. You need TP to vote and the amount of TP depends on your frozen funds.
 
 TP calculating method: 1 unit of TP for every frozen XLT.
 

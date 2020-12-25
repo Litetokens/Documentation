@@ -6,7 +6,7 @@ Use the block explorer at https://scan.litetokens.co.
 
 ### Block search
 
-Information on all blocks—from the genesis block to all current blocks—can be found on this page, including block height, its previous block and the corresponding byte size. You can also use the search bar to check block height and SR nodes.
+Information on all blocks—from the genesis block to all current blocks—can be found on this page, including block height, its previous block and the corresponding byte size. You can also use the search bar to check block height and LE nodes.
 
 ![](https://raw.githubusercontent.com/ybhgenius/Documentation/master/images/Blockchain-Explorer/blockchain模块/查看区块.png)
 
@@ -44,14 +44,14 @@ This page shows the following information on the nodes: IP address, hostname, bl
 
 ![](https://raw.githubusercontent.com/ybhgenius/Documentation/master/images/Blockchain-Explorer/节点信息/节点信息.png)
 
-## Check SR and SR candidate information
+## Check LE and LE candidate information
 
-Users can check out the Super Representative list which includes information on the last block, number of blocks produced, number of blocks missed, productivity and votes.
+Users can check out the Envoy list which includes information on the last block, number of blocks produced, number of blocks missed, productivity and votes.
 
 ![](https://raw.githubusercontent.com/ybhgenius/Documentation/master/images/Blockchain-Explorer/SP和SP候选信息/SP信息.png)
 ![](https://github.com/ybhgenius/Documentation/blob/master/images/Blockchain-Explorer/SP和SP候选信息/SP候选信息.png)
 
-Users can also check out corresponding links to find out more about the SRs.
+Users can also check out corresponding links to find out more about the LEs.
 
 ![](https://raw.githubusercontent.com/ybhgenius/Documentation/master/images/Blockchain-Explorer/SP和SP候选信息/查看详细信息.png)
 
@@ -121,7 +121,7 @@ A one-time service charge of 1024 XLT is required to create token.
 
 ![](https://raw.githubusercontent.com/ybhgenius/Documentation/master/images/Blockchain-Explorer/Guide_for_voting_on_Blockchain_Explorer/7.png)
 
-### 7. Freeze XLT prior to voting for SR candidates.
+### 7. Freeze XLT prior to voting for LE candidates.
 
 + Click FREEZE in your account.
 + Enter the amount of XLT you’d like to freeze.
@@ -134,30 +134,30 @@ A one-time service charge of 1024 XLT is required to create token.
 
 **Freezing Note**  
 
-Only XLT can be frozen. Freezing XLT enables two additional features: get Litetokens Power and bandwidth. With TPs, users can vote for SR candidates. When XLT is unfrozen, previous votes will lose effect, which can be avoided by refreezing XLT. Bandwidth points will not be cleared when XLT is unfrozen. New bandwidth points will be accumulated upon the next XLT freeze.
+Only XLT can be frozen. Freezing XLT enables two additional features: get Litetokens Power and bandwidth. With TPs, users can vote for LE candidates. When XLT is unfrozen, previous votes will lose effect, which can be avoided by refreezing XLT. Bandwidth points will not be cleared when XLT is unfrozen. New bandwidth points will be accumulated upon the next XLT freeze.
 
-### 8. To vote for SR candidates, find VOTEs in the navigation bar and click START VOTING.
+### 8. To vote for LE candidates, find VOTEs in the navigation bar and click START VOTING.
 
 ![](https://raw.githubusercontent.com/ybhgenius/Documentation/master/images/Blockchain-Explorer/Guide_for_voting_on_Blockchain_Explorer/10.png)
 
-### 9. Select a Super Representative and enter the voting page. Enter an amount of votes and click SUBMIT VOTES to cast your votes. You will be shown a notice for successful submission.
+### 9. Select an Envoy and enter the voting page. Enter an amount of votes and click SUBMIT VOTES to cast your votes. You will be shown a notice for successful submission.
 
 ![](https://raw.githubusercontent.com/ybhgenius/Documentation/master/images/Blockchain-Explorer/Guide_for_voting_on_Blockchain_Explorer/11.png)
 
 ![](https://raw.githubusercontent.com/ybhgenius/Documentation/master/images/Blockchain-Explorer/Guide_for_voting_on_Blockchain_Explorer/12.png)
 
-### 10.	Reset your votes for a given SR candidate by clicking RESET.
+### 10.	Reset your votes for a given LE candidate by clicking RESET.
 
 ![](https://raw.githubusercontent.com/ybhgenius/Documentation/master/images/Blockchain-Explorer/Guide_for_voting_on_Blockchain_Explorer/13.png)
 
 **Voting Note** 
 
-Enter an amount of votes to vote for an SR candidate. Voting requires TPs, which can be obtained through freezing XLT at 1 XLT for 1 TP. 1 TP equals 1 vote. When XLT is unfrozen, previous votes will lose effect, which can be avoided by refreezing XLT. Your vote will be successful as long as the number of votes casted is no more than the amount of TPs owned. You can cast as many votes as you like for an SR candidate. A successful vote submission costs 10^5 bandwidth points, unless it is 10s or more away from the previous contract (vote, transfer or XLT freeze). If TPs are insufficient for your submitted vote, you will be notified of insufficient frozen XLT. Only the latest vote submission counts (the last vote will overwrite all previous votes).
+Enter an amount of votes to vote for an LE candidate. Voting requires TPs, which can be obtained through freezing XLT at 1 XLT for 1 TP. 1 TP equals 1 vote. When XLT is unfrozen, previous votes will lose effect, which can be avoided by refreezing XLT. Your vote will be successful as long as the number of votes casted is no more than the amount of TPs owned. You can cast as many votes as you like for an LE candidate. A successful vote submission costs 10^5 bandwidth points, unless it is 10s or more away from the previous contract (vote, transfer or XLT freeze). If TPs are insufficient for your submitted vote, you will be notified of insufficient frozen XLT. Only the latest vote submission counts (the last vote will overwrite all previous votes).
 
 **Voting rules:**  
 + The maximal votes a user can cast should be no more than his/her holding of XLT.
 + Each user can vote for multiple candidates for multiple times.
-+ The SR list is updated once every 6 hours.
++ The LE list is updated once every 6 hours.
 + Voting does not cost any XLT.
 
 

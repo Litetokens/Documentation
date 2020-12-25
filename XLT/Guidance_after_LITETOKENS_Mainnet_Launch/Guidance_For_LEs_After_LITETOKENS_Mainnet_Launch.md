@@ -22,18 +22,18 @@ Official launch of the genesis block will be on June 25 10:00 (GMT+8).
 
 Token migration:
 + Exchanges: ERC20 XLT tokens will be transferred to LITETOKENS. LITETOKENS will transfer mainnet tokens to exchanges.
-+ SR: Express XLT migration channel for Super Representative candidates can ensure unimpeded application for candidacy and a certain amount of initial votes.
++ LE: Express XLT migration channel for Envoy candidates can ensure unimpeded application for candidacy and a certain amount of initial votes.
 
-## 4. SR Elections & Rewards
+## 4. LE Elections & Rewards
 
-Users vote for SR candidates using wallets. SRs are responsible for transaction packaging and block generation.
+Users vote for LE candidates using wallets. LEs are responsible for transaction packaging and block generation.
 
-# SR
+# LE
 
-![](https://github.com/ybhgenius/Documentation/blob/master/images/Gudiance_After_LITETOKENS_Mainnet_Launch/Gudiance_for_SRs.png)
+![](https://github.com/ybhgenius/Documentation/blob/master/images/Gudiance_After_LITETOKENS_Mainnet_Launch/Gudiance_for_LEs.png)
 
 1.	Campaigning 4/27-5/31 (GMT+8)
-SR election campaigning period allows SRs to attract more votes from XLT holders.
+LE election campaigning period allows LEs to attract more votes from XLT holders.
 
 2.	Candidates transfer deposit:
   Candidates will be informed on May 15th (GMT+8) to transfer 
@@ -47,11 +47,11 @@ Supporters can do test voting. Run test nodes and generate blocks.
 4.	Candidates’ deposit is returned:
 Deposit will be returned to designated LITETOKENS mainnet addresses at midnight June 25th (GMT+8).
 
-5.	Apply to become an SR candidate using the wallet and call on supporters to vote.
+5.	Apply to become an LE candidate using the wallet and call on supporters to vote.
 
-6.	Become official SRs:
+6.	Become official LEs:
 
-27 candidates who receive most votes will become official SRs. They are eligible to generate blocks and get rewards in XLT.
+27 candidates who receive most votes will become official LEs. They are eligible to generate blocks and get rewards in XLT.
 
 **Note**
 1.	Please pay deposit before May 31st (GMT+8). 

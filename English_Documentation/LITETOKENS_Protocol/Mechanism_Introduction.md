@@ -10,9 +10,9 @@ In order to create a wallet using this private key, you will need to invoke one 
 
 Once the transaction is confirmed, you can find corresponding information of the account in LITETOKENS network.
 
-## Guidelines for Super Representative application
+## Guidelines for Envoy application
 
-All willing users can apply to become Super Representatives, but to prevent malicious attacks, we have set up a threshold for admittance—to run for Super Representative, 9999 XLT in the applicants’ account will be burnt. After successful application, users can run for Super Representatives.
+All willing users can apply to become Envoys, but to prevent malicious attacks, we have set up a threshold for admittance—to run for Envoy, 9999 XLT in the applicants’ account will be burnt. After successful application, users can run for Envoys.
 
 ## Freezing/unfreezing balance
 
@@ -48,13 +48,13 @@ time: frozen duration lasting from date of freeze and date to unfreeze is 3 days
 
     `unfreezebalance password`
 
-## Block-production reward for Super Representatives
+## Block-production reward for Envoys
 
-Each time a Super Representative finishes block production, reward will be sent to the subaccount in the superledger. Super Representatives can check but not directly make use of this asset. A withdrawal can be made once every 24 hours, transferring the reward from the subaccount to the Super Representative’s account.
+Each time an Envoy finishes block production, reward will be sent to the subaccount in the superledger. Envoys can check but not directly make use of this asset. A withdrawal can be made once every 24 hours, transferring the reward from the subaccount to the Envoy’s account.
 
-## Super Representative Election
+## Envoy Election
 
-Every account in LITETOKENS’s network is entitled to vote for the Super Representatives they support. Voting requires TP, which is determined by users’ current amount of frozen balance.
+Every account in LITETOKENS’s network is entitled to vote for the Envoys they support. Voting requires TP, which is determined by users’ current amount of frozen balance.
 
 Calculation of TP: 1 TP for 1 frozen XLT.
 
